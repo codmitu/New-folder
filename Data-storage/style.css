@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-y: hidden;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(15, 20, 46);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 700px;
+    flex-wrap: wrap;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#bg-image{
+    position: absolute;
+    width: 100vw;
+    height: auto;
+    bottom: 0;
+    z-index: -1;
+}
+#left-side{
+    min-width: 450px;
+    min-height: 250px;
+    background-color: aqua;
+    margin: 20px;
+    border-radius: 12px 120px 12px 12px;
+    background-color: rgb(35, 47, 109);
+    margin-top: -30px;
+    display: inline;
+}
+#logo{
+    height: 130px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
+#logo img{
+    height: 50px;
+}
+#menu{
+    display: block;
+    height: 100px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 30px;
+}
+#menu div{
+    height: 60px;
+    width: 60px;
+    border-radius: 15px;
+    background-color: rgb(15, 20, 46);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#menu img{
+    width: 30px;
+    height: auto;
+}
+#right-side{
+    min-width: 700px;
+    height: 200px;
+    background-color: bisque;
+    margin: 20px;
+    background-color: rgb(35, 47, 109);
+    border-radius: 12px;
+    display: inline;
+    color: white;
+    padding: 50px;
+}
+.icon{
+    position: absolute;
+    transform: scale(16, 8);
+}
+.icon .iconify{
+    margin-left: 57px;
+    margin-bottom: 12px;
+}
+.icon-message{
+    position: absolute;
+    font-size: 16px;
+    margin-left: 420px;
+    margin-top: -120px;
+    color: grey;
+    display: block;
+    flex-wrap: nowrap;
+    width: 200px;
+}
+.icon-message b{
+    font-size: 50px;
+    color: black;
+}
+.message p{
+    font-size:18px;
+    color: rgb(207, 207, 207);
+    font-weight: lighter;
+}
+.empty-bar{
+    width: 100%;
+    height: 25px;
+    background-color: rgb(25, 33, 75);
+    margin: 20px 0;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+.filled-bar{
+    width: 75%;
+    height: 20px;
+    border-radius: 20px;
+    margin-left: 3px;
+    background-image: linear-gradient(to right,  rgb(255, 194, 166), rgb(252, 54, 136));
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.dot{
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+#space{
+    display: flex;
+    justify-content: space-between;
+}
