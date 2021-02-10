@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-image: linear-gradient(to top, rgb(55, 79, 145)50%, rgb(86, 106, 161));
+    height: 100px;
+}
+#header{
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+}
+#header > div{
+    float: left;
+    font-size: xxx-large;
+    font-weight: 600;
+    position: relative;
+    top: 20%;
+}
+.grid1{
+    grid-area: grid1;
+}
+.grid2{
+    grid-area: grid2;
+}
+.grid3{
+    grid-area: grid3;
+}
+.grid4{
+    grid-area: grid4;
+}
+.grid5{
+    grid-area: grid5;
+}
+.grid6{
+    grid-area: grid6;
+}
+
+.grid8{
+    grid-area: grid8;
+}
+form{
+    float: right;
+    position: relative;
+    top: 20px;
+    display: grid;
+    grid-template-columns: 200px 200px 60px;
+    grid-template-rows: auto;
+    grid-template-areas: "grid1 grid2 grid3"
+    "grid4 grid5 grid6"
+    ". grid8 .";
+    column-gap: 15px;
+    row-gap: 5px;
+}
+form>div{
+    font-size: 13px;
+}
+form input, button{
+    height: 25px;
+    width: 100%;
+}
+form button{
+    background-color: rgb(69, 94, 175);
+    border: 2px solid rgb(58, 78, 143);
+    color: white;
+}
+form a{
+    text-decoration: none;
+    color: rgb(130, 143, 201);
+}
+@media screen and (max-width: 720px){
+    #header>div, header form{
+        width: 100%;
+        position: static;
+        padding-left: 20px;
+    }
+    header{
+        height: 150px;
+    }
+}
+@media screen and (max-width: 501px){
+    form{
+        
+    }
+}
+#body{
+    background-image: linear-gradient(to top, rgb(200, 205, 233), white);
+    height: 700px;
+}
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+}
