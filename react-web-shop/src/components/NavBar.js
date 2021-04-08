@@ -127,7 +127,7 @@ export default function NavBar(props) {
                         </Link>
                     </Button>
                     <Button className={classes.button} onClick={handleOpen}>
-                        <Link >Account
+                        <Link to=''>Account
                             <AccountCircleIcon fontSize="small" />
                         </Link>
                     </Button>

@@ -218,7 +218,7 @@ export default function Home(props) {
                             elevation={3}
                             className={classes.paper}
                             key={index}
-                            data-id={index}
+                            data={index}
                             style={{ gridColumn: '1/3', gridRow: '4/5' }}
                         >
                             <div style={{ display: 'none' }} className="item-id">id</div>
@@ -232,8 +232,8 @@ export default function Home(props) {
                                     <h5>Description: {item.description}</h5>
                                     <h5>Specifications:</h5>
                                     <Divider style={{ maxWidth: 200 }} />
-                                    {item.specs.map((spec, id) => (
-                                        <small key={id}>{spec}</small>
+                                    {item.specs.map((spec, nr) => (
+                                        <small key={nr}>{spec}</small>
                                     ))}
                                 </aside>
                             </Link>
@@ -258,7 +258,7 @@ export default function Home(props) {
                             elevation={1}
                             className={classes.paper}
                             key={index}
-                            data-id={index}
+                            data={index}
                         >
                             <div style={{ display: 'none' }} className="item-id">id</div>
                             <div style={{ display: 'none' }} className="info">info</div>

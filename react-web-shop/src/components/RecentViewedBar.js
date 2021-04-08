@@ -54,7 +54,7 @@ export default function RecentViewedBar() {
                     <Grow in={checked}>
                         <Paper elevation={1}>
                             <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, repellendus?</h5>
-                            <Link href="details.html?index={index}">
+                            <Link to="details.html?index={index}">
                                 <img alt="" src={image2} style={{ width: '100%' }} />
                             </Link>
                         </Paper>
@@ -67,7 +67,7 @@ export default function RecentViewedBar() {
                     >
                         <Paper elevation={1}>
                             <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, repellendus?</h5>
-                            <Link href="details.html?index={index}">
+                            <Link to="details.html?index={index}">
                                 <img alt="" src={image1} style={{ width: '100%' }} />
                             </Link>
                         </Paper>
@@ -79,7 +79,7 @@ export default function RecentViewedBar() {
                     >
                         <Paper elevation={1}>
                             <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, repellendus?</h5>
-                            <Link href="details.html?index={index}">
+                            <Link to="details.html?index={index}">
                                 <img alt="" src={image2} style={{ width: '100%' }} />
                             </Link>
                         </Paper>
@@ -91,7 +91,7 @@ export default function RecentViewedBar() {
                     >
                         <Paper elevation={1}>
                             <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, repellendus?</h5>
-                            <Link href="details.html?index={index}">
+                            <Link to="details.html?index={index}">
                                 <img alt="" src={image1} style={{ width: '100%' }} />
                             </Link>
                         </Paper>
@@ -103,7 +103,7 @@ export default function RecentViewedBar() {
                     >
                         <Paper elevation={1}>
                             <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, repellendus?</h5>
-                            <Link href="details.html?index={index}">
+                            <Link to="details.html?index={index}">
                                 <img alt="" src={image2} style={{ width: '100%' }} />
                             </Link>
                         </Paper>
@@ -115,7 +115,7 @@ export default function RecentViewedBar() {
                     >
                         <Paper elevation={1}>
                             <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, repellendus?</h5>
-                            <Link href="details.html?index={index}">
+                            <Link to="details.html?index={index}">
                                 <img alt="" src={image1} style={{ width: '100%' }} />
                             </Link>
                         </Paper>

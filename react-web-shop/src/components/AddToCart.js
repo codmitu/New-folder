@@ -114,7 +114,6 @@ export default function AddToCart({ product }) {
                     </Grid>
                 </Grid>
                 <div className={classes.buttons}>
-                    {/* <ButtonGroup color="primary" aria-label="contained primary button group"> */}
                     <Button variant="contained" color="primary" style={{ padding: 0 }}>
                         <ToggleButton
                             selected={selectedCart}
@@ -137,7 +136,6 @@ export default function AddToCart({ product }) {
                             {!selectedFav ? <Favorite /> : <Favorite color="secondary" />}
                         </ToggleButton>
                     </Button>
-                    {/* </ButtonGroup> */}
                 </div>
             </div>
         </section >
