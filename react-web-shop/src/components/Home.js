@@ -197,7 +197,6 @@ export default function Home(props) {
                 {/* BOTTOM PAGE ADS */}
                 <Box style={{ gridColumn: '1/5', gridRow: '7/8', padding: 0 }} >
                     <Carousel
-                        // centered
                         autoPlay={5000}
                         infinite
                         animationSpeed={1000}

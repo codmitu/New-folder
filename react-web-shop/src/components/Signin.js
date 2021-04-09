@@ -15,16 +15,11 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         '& > *': {
             margin: theme.spacing(1),
-            // width: '100%',
-            // width: '25ch',
         },
         '& .MuiOutlinedInput-input': {
             padding: '15px 14px',
             fontSize: '1.3em',
         },
-        '& .MuiFormLabel-root': {
-            // lineHeight: '40px'
-        }
     },
 }));
 
@@ -87,8 +82,8 @@ export default function Signin({ setAction, handleClose }) {
                         Sign In
                     </Button>
                     <Box style={{ margin: '0 auto' }}>
-                        <Link onClick={() => setAction('signup')}>Create an account.</Link> /&nbsp;
-                        <Link onClick={() => setAction('forgotPassword')}>Forgot password.</Link>
+                        <Link to="" onClick={() => setAction('signup')}>Create an account.</Link> /&nbsp;
+                        <Link to="" onClick={() => setAction('forgotPassword')}>Forgot password.</Link>
                     </Box>
                 </form>
             </Paper>

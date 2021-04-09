@@ -116,7 +116,6 @@ export default function Details() {
                             size={40}
                             thickness={4}
                         />
-                        {/* Loading.... */}
                     </Backdrop>
                 </div>
             )}

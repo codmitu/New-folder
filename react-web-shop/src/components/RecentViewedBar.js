@@ -12,7 +12,6 @@ import image2 from '../images/img.jpg'
 const useStyles = makeStyles((theme) => ({
     root: {
         paddingBottom: 20,
-        // overflowY: 'hidden',
     },
     container: {
         display: 'flex',
@@ -120,8 +119,6 @@ export default function RecentViewedBar() {
                             </Link>
                         </Paper>
                     </Grow>
-
-
                 </div>
             </div>
         </section>

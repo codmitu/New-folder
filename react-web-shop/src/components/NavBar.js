@@ -19,7 +19,6 @@ import Signin from './Signin';
 import Signup from './Signup';
 import { useAuth } from '../contexts/AuthContext';
 import ForgotPassword from './ForgotPassword';
-// import { AuthProvider } from '../contexts/AuthContext';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -63,7 +62,6 @@ export default function NavBar(props) {
     const [typingTimeout, setTypingTimeout] = useState(0);
 
     const { currentUser } = useAuth();
-    // console.log(currentUser.email);
 
     const handleChange = (event) => {
         if (typingTimeout) {

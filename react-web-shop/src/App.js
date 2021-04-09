@@ -95,9 +95,9 @@ function App() {
   }
 
   return (
-    <Router>
-      <React.Fragment>
-        <AuthProvider>
+    <AuthProvider>
+      <Router>
+        <React.Fragment>
           <CssBaseline />
           <HideOnScroll>
             <AppBar>
@@ -112,11 +112,9 @@ function App() {
             <Route path="/cart">
               <Cart />
             </Route>
-            <PrivateRoute path="/account" component={Account} />
-
-            {/* <Account /> */}
-
-            {/* </PrivateRoute> */}
+            <PrivateRoute path="/account">
+              <Account />
+            </PrivateRoute>
             <Route path="/details">
               <Details />
             </Route>
@@ -126,9 +124,9 @@ function App() {
           </Switch>
           <RecentViewedBar />
           <Footer />
-        </AuthProvider>
-      </React.Fragment>
-    </Router >
+        </React.Fragment>
+      </Router >
+    </AuthProvider>
   )
 }
 

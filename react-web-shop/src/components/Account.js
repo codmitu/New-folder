@@ -41,7 +41,6 @@ export default function Account() {
     }
 
     const [open, setOpen] = useState(false);
-    // const [action, setAction] = useState('signin');
 
     const handleOpen = () => {
         setOpen(true);

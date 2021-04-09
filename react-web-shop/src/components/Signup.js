@@ -14,16 +14,11 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         '& > *': {
             margin: theme.spacing(1),
-            // width: '100%',
-            // width: '25ch',
         },
         '& .MuiOutlinedInput-input': {
             padding: '15px 14px',
             fontSize: '1.3em',
         },
-        '& .MuiFormLabel-root': {
-            // lineHeight: '40px'
-        }
     },
 }));
 
@@ -97,7 +92,7 @@ export default function Signup({ setAction, handleClose }) {
                     <Button type="submit" variant="contained" color="primary" disabled={loading}>
                         Sign Up
                     </Button>
-                    <Link style={{ margin: '0 auto' }} onClick={() => setAction('signin')}>Already have an account? Sign In.</Link>
+                    <Link to="" style={{ margin: '0 auto' }} onClick={() => setAction('signin')}>Already have an account? Sign In.</Link>
                 </form>
             </Paper>
         </Container>

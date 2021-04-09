@@ -14,16 +14,11 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         '& > *': {
             margin: theme.spacing(1),
-            // width: '100%',
-            // width: '25ch',
         },
         '& .MuiOutlinedInput-input': {
             padding: '15px 14px',
             fontSize: '1.3em',
         },
-        '& .MuiFormLabel-root': {
-            // lineHeight: '40px'
-        }
     },
 }));
 
