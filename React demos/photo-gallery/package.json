@@ -1,5 +1,5 @@
 {
-  "homepage": "http://gelu89.github.io/photo-gallery",
+  "homepage": "http://codmitu.github.io/photo-gallery",
   "name": "photo-gallery",
   "version": "0.1.0",
   "private": true,
@@ -8,6 +8,7 @@
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.1",
     "firebase": "^8.2.10",
+    "firebase-admin": "^9.6.0",
     "framer-motion": "^3.10.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
