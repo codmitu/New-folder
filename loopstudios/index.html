@@ -40,7 +40,21 @@
                 <li><a href="#">Products</a></li>
                 <li><a href="#">Support</a></li>
             </ul>
+            <img src="./images/icon-hamburger.svg" alt="hamburger icon" id="hamburger-icon">
         </nav>
+        <menu>
+            <section>
+                <h2>loopstudios</h2>
+                <img src="./images/icon-close.svg" alt="close-menu-icon" id="close-menu">
+            </section>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </menu>
         <header>
             <h1>IMMERSIVE EXPERIENCES THAT DELIVER</h1>
         </header>
@@ -118,7 +132,16 @@
         </section>
     </footer>
 
-
+    <script>
+        const menu = document.querySelector("#hamburger-icon");
+        const closeMenu = document.querySelector("#close-menu");
+        menu.addEventListener('click', () => {
+            document.querySelector("menu").style.visibility = "visible";
+        });
+        closeMenu.addEventListener('click', () => {
+            document.querySelector("menu").style.visibility = "hidden";
+        })
+    </script>
 </body>
 
 </html>
