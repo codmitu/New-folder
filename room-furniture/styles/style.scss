@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Mandali&family=Noto+Sans+SC:wght@100;300;400;500;700&family=Poppins:wght@100;200;300;400;500;600&family=Spartan:wght@300;400;500;600;700&display=swap');
+
+
+$fontNav: 'Poppins';
+$fontHeader: 'Spartan';
+
+$laptop: 1200px;
+$tablet: 800px;
+$phone: 500px;
+
+@mixin laptop {
+    @media (max-width: #{$laptop}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media (max-width: #{$phone}) {
+        @content;
+    }
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+    @include laptop {
+        font-size: 0.7pc;
+    }
+
+    main {
+        display: flex;
+
+        @include tablet {
+            flex-direction: column;
+        }
+
+        section {
+            min-width: 55vw;
+            aspect-ratio: 1.6 / 1;
+            background: url("../images/desktop-image-hero-1.jpg") center center no-repeat;
+            transition: all 0.5s ease;
+            background-size: cover;
+            position: relative;
+            padding: 5vh 5vw;
+
+            @include phone {
+                height: 50vh;
+            }
+
+            nav {
+                display: flex;
+                align-items: center;
+                position: relative;
+
+                @include tablet {
+                    justify-content: center;
+                }
+
+                img {
+                    margin-top: 4px;
+                }
+
+                ul {
+                    display: flex;
+
+                    @include tablet {
+                        display: none;
+                    }
+
+                    li {
+                        list-style: none;
+
+                        a {
+                            margin: 0 15px;
+                            color: white;
+                            font-family: $fontNav;
+                            text-decoration: none;
+                            position: relative;
+
+                            &::after {
+                                content: '';
+                                width: 50%;
+                                height: 2px;
+                                margin-left: -50%;
+                                transform: translateX(50%) scale(0);
+                                transform-origin: center;
+                                transition: all 0.2s ease;
+                                background-color: white;
+                                position: absolute;
+                                bottom: -10px;
+                                left: 50%;
+                            }
+
+                            &:hover::after {
+                                transform: translateX(50%) scale(1);
+                            }
+                        }
+                    }
+                }
+
+                #hamburger-menu {
+                    display: none;
+                    position: absolute;
+                    left: 0;
+                    user-select: none;
+
+                    @include tablet {
+                        display: block;
+                    }
+
+
+                }
+            }
+
+            menu {
+                position: fixed;
+                z-index: 10;
+                pointer-events: none;
+                left: 0;
+                top: 0;
+                margin: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: rgba(0, 0, 0, 0.446);
+                visibility: hidden;
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    background-color: white;
+                    position: absolute;
+                    left: 0;
+                    transform: translateX(-100%);
+                    transition: all 0.5s ease;
+                    top: 0;
+                    padding-left: 5vw;
+                    width: 100%;
+                    height: 100px;
+                    pointer-events: all;
+
+                    #mobile-menu {
+                        user-select: none;
+                    }
+
+                    ul {
+                        display: flex;
+                        width: 100%;
+                        max-width: 400px;
+                        justify-content: space-evenly;
+                        padding: 0;
+
+                        li {
+                            list-style: none;
+
+                            a {
+                                margin: 0 15px;
+                                color: black;
+                                font-weight: 600;
+                                font-family: $fontNav;
+                                text-decoration: none;
+                                position: relative;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        header {
+            padding: 10vh 7vw;
+            position: relative;
+
+            h1 {
+                font-family: $fontHeader;
+                font-size: 2.5em;
+                line-height: 1em;
+                font-weight: 600;
+                letter-spacing: -2px;
+            }
+
+            p {
+                font-family: $fontNav;
+                color: rgb(169, 169, 169);
+            }
+
+            button {
+                all: unset;
+                font-family: $fontHeader;
+                letter-spacing: 0.6em;
+                word-spacing: 0.6em;
+                cursor: pointer;
+                font-weight: 600;
+                margin-top: 20px;
+                transition: all 0.1s ease;
+                padding: 20px 0;
+
+                &:hover {
+                    filter: invert(100%) grayscale(100%) saturate(100%) hue-rotate(0deg) brightness(50%) contrast(100%);
+                }
+            }
+
+            aside {
+                position: absolute;
+                display: flex;
+                bottom: 0;
+                left: 0;
+                width: 160px;
+
+                @include laptop {}
+
+                @include tablet {
+                    left: auto;
+                    right: 0;
+                    top: -80px;
+                }
+
+                @include phone {
+                    width: 80px;
+                    top: -40px;
+                }
+
+                div {
+                    display: flex;
+                    place-content: center;
+                    place-items: center;
+                    width: 100%;
+                    height: 80px;
+                    background-color: black;
+                    cursor: pointer;
+                    user-select: none;
+
+                    @include phone {
+                        height: 40px;
+                        cursor: default;
+
+                        img {
+                            height: 15px;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: grey;
+                    }
+                }
+            }
+        }
+    }
+
+    article {
+        display: flex;
+        margin-bottom: 0;
+        height: 100%;
+
+        @include tablet {
+            flex-direction: column;
+        }
+
+        img {
+            object-fit: cover;
+            background-size: cover;
+
+            @include laptop {
+                max-width: 30%;
+            }
+
+            @include tablet {
+                max-width: 100%;
+            }
+        }
+
+        aside {
+            font-family: $fontNav;
+            padding: 5vh 5vw;
+            padding-bottom: 10px;
+
+            h3 {
+                letter-spacing: 0.3em;
+            }
+
+            p {
+                font-family: $fontNav;
+                color: rgb(169, 169, 169);
+            }
+        }
+    }
+}
+
+.mobile-menu {
+    transform: translateX(0) !important;
+}
+
+.image1 {
+    background: url('../images/desktop-image-hero-2.jpg') center center no-repeat;
+    background-size: cover;
+    opacity: 0;
+}
+
+.image2 {
+    background: url('../images/desktop-image-hero-3.jpg') center center no-repeat;
+    background-size: cover;
+    opacity: 0;
+}
