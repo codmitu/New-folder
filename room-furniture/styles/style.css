@@ -348,8 +348,8 @@ body article aside p {
 }
 
 .mobile-menu {
-  -webkit-transform: translateX(0) !important;
-          transform: translateX(0) !important;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .image1 {
