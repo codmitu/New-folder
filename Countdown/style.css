@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: url("./img.jpg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10vh 5vw;
+    color: white;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: normal;
+}
+
+.countdown-container {
+    display: flex;
+
+}
+
+.big-text {
+    font-size: 6rem;
+    line-height: 1;
+    margin: 0 2rem;
+}
+
+.countdown-el {
+    text-align: center;
+}
+
+@media only screen and (max-width: 700px) {
+    .big-text {
+        font-size: 3rem;
+        margin: 0 0.7rem;
+    }
+}
