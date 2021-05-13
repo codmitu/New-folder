@@ -68,9 +68,7 @@ header button {
 }
 
 #fav-meals::-webkit-scrollbar {
-    /* height: 20px; */
     width: 0px;
-
 }
 
 
@@ -113,12 +111,10 @@ header button {
     position: absolute;
     top: 0;
     right: 0;
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 
-.fav-meals li:hover .delete-fav {
-    visibility: visible;
-}
+
 
 .meals {
     padding: 1rem;
@@ -226,6 +222,14 @@ header button {
     img,
     button {
         cursor: pointer;
+    }
+
+    .fav-meals li .delete-fav {
+        visibility: hidden;
+    }
+
+    .fav-meals li:hover .delete-fav {
+        visibility: visible;
     }
 }
 
