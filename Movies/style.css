@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Pridi:wght@200;300;400;500;600;700&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+:root {
+    --fontSans1: 'Item', sans-serif;
+    --fontSans2: 'Rubik', serif;
+    --fontSans3: 'Tajawal', serif;
+    --fontSerif1: 'Pridi', serif;
+    --fontCursive1: 'Sacramento', serif;
+
+    --colorBlue1: #2C73D2;
+    --colorBlue2: #0081CF;
+    --colorBlue3: #008AC2;
+    --colorBlue4: #009EFA;
+    --colorBlue5: #00D2FC;
+    --colorTurqoise1: #0089BA;
+    --colorTurqoise2: #008E9B;
+    --colorGreen1: #4E8397;
+    --colorGreen2: #008F7A;
+    --colorGreen3: #00C9A7;
+    --colorGreen4: #4FFBDF;
+    --colorPurple1: #280D67;
+    --colorPurple2: #845EC2;
+    --colorPurple3: #B39CD0;
+    --colorBrown1: #4B4453;
+    --colorBrown2: #AD5E00;
+    --colorBrown3: #BEA6A0;
+    --colorOrange1: #C34A36;
+    --colorOrange2: #FF8066;
+    --colorOrange3: #FF9671;
+    --colorOrange4: #FFC75F;
+    --colorViolet1: #D65DB1;
+    --colorViolet2: #BB3BB0;
+    --colorPink1: #FF6F91;
+    --colorYellow1: #F9F871;
+    --colorYellow1: #FEFEDF;
+}
+
+* {
+    outline: none;
+    box-sizing: border-box;
+}
+
+a,
+button,
+input[type="submit"],
+input[type="button"] {
+    all: unset;
+}
+
+body {
+    background-color: var(--colorBrown1);
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    font-family: var(--fontSans2);
+}
+
+header {
+    background-color: rgb(106, 87, 96);
+    padding: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#search {
+    border-radius: 50px;
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--colorBrown3);
+    font-family: var(--fontSans1);
+    color: var(--colorBrown3);
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+#search:focus {
+    background-color: var(--colorBrown1);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5vw;
+    margin: 1rem;
+}
+
+.movie {
+    position: relative;
+    width: 300px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: rgb(106, 87, 96);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.274);
+    cursor: pointer;
+}
+
+.movie-info {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(201, 201, 201);
+    padding: 1rem;
+    letter-spacing: 1px;
+}
+
+.movie-info span {
+    background-color: var(--colorBrown1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    align-self: center;
+}
+
+.movie-info span.green {
+    color: var(--colorGreen3)
+}
+
+.movie-info span.orange {
+    color: var(--colorOrange2)
+}
+
+.movie-info span.red {
+    color: red;
+}
+
+
+.movie img {
+    max-width: 100%;
+}
+
+.movie h3 {
+    margin: 0;
+}
+
+.overview {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--colorBrown3);
+    padding: 2rem;
+    transform: translateY(100%);
+    transition: 0.2s ease;
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
+}
+
+@media only screen and (min-width: 500px) {
+
+    a,
+    button,
+    input[type="button"],
+    input[type="submit"] {
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    a,
+    button,
+    input[type="button"],
+    input[type="submit"] {
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+}
