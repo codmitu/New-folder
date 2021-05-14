@@ -1,0 +1,115 @@
+* {
+    outline: none;
+    box-sizing: border-box;
+}
+
+a,
+button,
+input {
+    all: unset;
+}
+
+html {
+    width: 100%;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(86, 216, 255);
+    display: flex;
+    padding: 10vh 0;
+    flex-wrap: wrap;
+}
+
+.add {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: center;
+    background-color: rgb(93, 192, 104);
+    font-size: 1.2rem;
+    color: white;
+    padding: 5px;
+}
+
+.add:hover {
+    transform: scale(1.1);
+}
+
+
+.notes {
+    margin: 10px;
+    background-color: white;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.261);
+}
+
+.notes .tools {
+    background-color: rgb(151, 243, 151);
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem;
+}
+
+.notes .tools.edit-mode {
+    background-color: rgb(255, 159, 142);
+}
+
+.notes .tools button {
+    color: grey;
+    margin-left: 10px;
+}
+
+.notes .main {
+    background-color: white;
+    height: 300px;
+    width: 400px;
+    overflow: auto;
+    font-family: inherit;
+    padding: 0 10px;
+    font-size: 1.2rem;
+    color: #888;
+}
+
+.notes textarea {
+    height: 300px;
+    width: 400px;
+    max-width: 100%;
+    border: none;
+    resize: none;
+    font-family: inherit;
+    padding: 0 10px;
+    font-size: 1.2rem;
+}
+
+.notes .hidden {
+    display: none;
+}
+
+@media only screen and (min-width: 500px) {
+
+    a,
+    button,
+    input[type="button"] {
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    a,
+    button {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .notes {
+        width: calc(100vw - 5vw);
+    }
+
+    .notes .main,
+    .notes textarea {
+        width: 100%;
+    }
+}
