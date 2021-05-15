@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Pridi:wght@200;300;400;500;600;700&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+:root {
+    --fontSans1: 'Item', sans-serif;
+    --fontSans2: 'Rubik', serif;
+    --fontSans3: 'Tajawal', serif;
+    --fontSerif1: 'Pridi', serif;
+    --fontCursive1: 'Sacramento', serif;
+
+    --colorBlue1: #2C73D2;
+    --colorBlue2: #0081CF;
+    --colorBlue3: #008AC2;
+    --colorBlue4: #009EFA;
+    --colorBlue5: #00D2FC;
+    --colorTurqoise1: #0089BA;
+    --colorTurqoise2: #008E9B;
+    --colorGreen1: #4E8397;
+    --colorGreen2: #008F7A;
+    --colorGreen3: #00C9A7;
+    --colorGreen4: #4FFBDF;
+    --colorPurple1: #280D67;
+    --colorPurple2: #845EC2;
+    --colorPurple3: #B39CD0;
+    --colorBrown1: #4B4453;
+    --colorBrown2: #AD5E00;
+    --colorBrown3: #BEA6A0;
+    --colorOrange1: #C34A36;
+    --colorOrange2: #FF8066;
+    --colorOrange3: #FF9671;
+    --colorOrange4: #FFC75F;
+    --colorViolet1: #D65DB1;
+    --colorViolet2: #BB3BB0;
+    --colorPink1: #FF6F91;
+    --colorYellow1: #F9F871;
+    --colorYellow1: #FEFEDF;
+}
+
+* {
+    outline: none;
+    box-sizing: border-box;
+}
+
+a,
+button,
+input[type="submit"],
+input[type="button"] {
+    all: unset;
+}
+
+a,
+a:visited,
+a:active {
+    color: inherit;
+}
+
+
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    font-family: var(--fontSans1);
+    padding: 10vh 5vw;
+    background-image: radial-gradient(circle at 80% 36%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 3%, transparent 3%, transparent 100%), radial-gradient(circle at 22% 10%, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.01) 3%, transparent 3%, transparent 100%), radial-gradient(circle at 17% 26%, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.02) 7%, transparent 7%, transparent 100%), radial-gradient(circle at 82% 24%, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.02) 7%, transparent 7%, transparent 100%), radial-gradient(circle at 55% 69%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 7%, transparent 7%, transparent 100%), radial-gradient(circle at 56% 67%, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.02) 7%, transparent 7%, transparent 100%), radial-gradient(circle at 90% 17%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 7%, transparent 7%, transparent 100%), radial-gradient(circle at 73% 24%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 7%, transparent 7%, transparent 100%), radial-gradient(circle at 80% 31%, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.01) 7%, transparent 7%, transparent 100%), radial-gradient(circle at 18% 25%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 5%, transparent 5%, transparent 100%), radial-gradient(circle at 36% 40%, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.02) 5%, transparent 5%, transparent 100%), radial-gradient(circle at 33% 21%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 5%, transparent 5%, transparent 100%), radial-gradient(circle at 34% 77%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 5%, transparent 5%, transparent 100%), radial-gradient(circle at 65% 41%, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.02) 5%, transparent 5%, transparent 100%), radial-gradient(circle at 29% 89%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 5%, transparent 5%, transparent 100%), radial-gradient(circle at 63% 6%, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.01) 5%, transparent 5%, transparent 100%), radial-gradient(circle at 54% 74%, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.02) 5%, transparent 5%, transparent 100%), radial-gradient(circle at 40% 31%, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.01) 5%, transparent 5%, transparent 100%), linear-gradient(45deg, rgb(106, 73, 228), rgb(19, 30, 181));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#search {
+    background-color: var(--colorPurple1);
+    border-radius: 10px;
+    border: none;
+    padding: 1rem;
+    color: grey;
+    font-family: inherit;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 10px rgba(46, 11, 67, 0.816);
+}
+
+#search::placeholder {
+    color: var(--colorPurple2)
+}
+
+.card {
+    background-color: var(--colorPurple1);
+    display: flex;
+    padding: 3rem;
+    box-shadow: 0 5px 10px rgba(33, 7, 55, 0.816);
+    border-radius: 20px;
+    max-width: 800px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar {
+    border-radius: 50%;
+    border: 10px solid rgb(46, 0, 46);
+    width: 150px;
+    height: 150px;
+}
+
+.user-info {
+    color: rgb(209, 209, 209);
+    margin-left: 2rem;
+}
+
+.user-info ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    list-style: none;
+    max-width: 300px;
+}
+
+.repo {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.7rem;
+    border-radius: 2px;
+    background-color: var(--colorPurple2);
+}
+
+
+@media only screen and (min-width: 500px) {
+
+    a,
+    button,
+    input[type="button"],
+    input[type="submit"] {
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    a,
+    button,
+    input[type="button"],
+    input[type="submit"] {
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+}
