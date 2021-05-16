@@ -8,6 +8,7 @@ const sizeEl = document.querySelector('#size');
 const colorBtn = document.querySelector('#color');
 const bgColorBtn = document.querySelector('#bgColor');
 const rubberBtn = document.querySelector('#rubber');
+const redoBtn = document.querySelector('#redo');
 const undoBtn = document.querySelector('#undo');
 canvas.style.backgroundColor = "white";
 
@@ -15,18 +16,19 @@ canvas.width = 800;
 canvas.height = 800;
 
 let rubber = false;
-let size2;
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 ctx.strokeStyle = "green";
 ctx.lineWidth = 5;
 let drawing = false;
-let pathsry = [];
+let undo = [];
 let points = [];
+let redo = [];
 let color;
 let size;
-var mouse = { x: 0, y: 0 };
-var previous = { x: 0, y: 0 };
+let size2;
+let mouse = { x: 0, y: 0 };
+let previous = { x: 0, y: 0 };
 
 canvas.addEventListener('mousedown', function (e) {
     drawing = true;
@@ -36,7 +38,6 @@ canvas.addEventListener('mousedown', function (e) {
     mouse = oMousePos(canvas, e);
     points = [];
     points.push({ x: mouse.x, y: mouse.y, size: size, color: color });
-    console.log(points)
 });
 
 canvas.addEventListener('mousemove', function (e) {
@@ -52,23 +53,55 @@ canvas.addEventListener('mousemove', function (e) {
         ctx.stroke();
     }
 });
+canvas.addEventListener('click', function (e) {
+    ctx.beginPath();
+    ctx.lineTo(mouse.x, mouse.y);
+    ctx.stroke();
+
+});
 
 
 canvas.addEventListener('mouseup', function () {
     drawing = false;
     // Adding the path to the array or the paths
-    pathsry.push(points);
-    console.log(pathsry)
+    undo.push(points);
 });
 
+redoBtn.addEventListener('click', Redo);
 
-undo.addEventListener("click", Undo);
+function Redo() {
+    if (redo.length > 0) {
+        undo.push(redo[redo.length - 1]);
+        redo.splice(-1, 1);
+        drawPaths();
+        updateSize();
+        console.log(redo)
+    }
+}
+
+undoBtn.addEventListener("click", Undo);
+
+function Undo() {
+    if (undo.length > 0) {
+        // remove the last path from the paths array
+        redo.push(undo[undo.length - 1]);
+        // console.log(redo);
+        undo.splice(-1, 1);
+        // draw all the paths in the paths array
+        drawPaths();
+        updateSize();
+    }
+}
 
 function drawPaths() {
     // delete everything
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     // draw all the paths in the paths array
-    pathsry.forEach(path => {
+    undo.forEach(path => {
+        // console.log(path)
+        if (path === undefined) {
+            return;
+        }
         ctx.beginPath();
         ctx.moveTo(path[0].x, path[0].y);
         ctx.strokeStyle = path[0].color;
@@ -79,7 +112,9 @@ function drawPaths() {
         ctx.stroke();
     })
     colorBtn.value = ctx.strokeStyle;
+
 }
+
 
 colorBtn.addEventListener('input', (e) => {
     document.body.style.backgroundColor = e.target.value + '33'; // 33 is #color transparency (20%);
@@ -99,13 +134,7 @@ function updateColor(e) {
     updateSize();
 }
 
-function Undo() {
-    // remove the last path from the paths array
-    pathsry.splice(-1, 1);
-    // draw all the paths in the paths array
-    drawPaths();
-    updateSize();
-}
+
 
 
 // a function to detect the mouse position
@@ -145,5 +174,11 @@ function updateSize() {
     colorBtn.style.width = ctx.lineWidth + 10 + "px";
     colorBtn.style.height = ctx.lineWidth + 10 + "px";
 }
+resetBtn.addEventListener('click', () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    undo = [];
+    redo = [];
+    points = [];
+})
 
 updateSize();

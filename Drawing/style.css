@@ -101,7 +101,9 @@ canvas {
 #decrease,
 #size,
 #rubber,
-#reset {
+#reset,
+#undo,
+#redo {
     width: 50px;
     height: 50px;
     text-align: center;
@@ -110,6 +112,19 @@ canvas {
 
 #size {
     cursor: default;
+    color: rgb(175, 175, 175);
+}
+
+#redo {
+    color: rgb(99, 192, 99);
+}
+
+#undo {
+    color: rgb(255, 251, 141);
+}
+
+#reset {
+    color: rgb(255, 135, 135);
 }
 
 #rubber {
@@ -119,7 +134,9 @@ canvas {
 #increase:hover,
 #decrease:hover,
 #rubber:hover,
-#reset:hover {
+#reset:hover,
+#undo:hover,
+#redo:hover {
     background-color: rgba(0, 0, 0, 0.652);
 }
 
