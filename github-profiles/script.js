@@ -2,7 +2,6 @@ const APIURL = 'https://api.github.com/users/';
 const form = document.querySelector('#form');
 const main = document.querySelector('#main');
 const search = document.querySelector('#search');
-getUser('florinpop17');
 async function getUser(user) {
     const res = await fetch(APIURL + user);
     const resData = await res.json()
