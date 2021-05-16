@@ -51,6 +51,12 @@ canvas.addEventListener('mousemove', function (e) {
         ctx.moveTo(previous.x, previous.y);
         ctx.lineTo(mouse.x, mouse.y);
         ctx.stroke();
+        if (mouse.x > 799 || mouse.x < 1 || mouse.y > 799 || mouse.y < 1) {
+            drawing = false;
+            // Adding the path to the array or the paths
+            undo.push(points);
+            redo = [];
+        }
     }
 });
 canvas.addEventListener('click', function (e) {
@@ -59,7 +65,6 @@ canvas.addEventListener('click', function (e) {
     ctx.stroke();
 
 });
-
 
 canvas.addEventListener('mouseup', function () {
     drawing = false;
@@ -132,8 +137,6 @@ function updateColor(e) {
     }
     updateSize();
 }
-
-
 
 
 // a function to detect the mouse position
