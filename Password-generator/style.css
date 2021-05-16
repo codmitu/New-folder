@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Pridi:wght@200;300;400;500;600;700&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+:root {
+    --fontSans1: 'Item', sans-serif;
+    --fontSans2: 'Rubik', serif;
+    --fontSans3: 'Tajawal', serif;
+    --fontSerif1: 'Pridi', serif;
+    --fontCursive1: 'Sacramento', serif;
+
+    --colorBlue1: #2C73D2;
+    --colorBlue2: #0081CF;
+    --colorBlue3: #008AC2;
+    --colorBlue4: #009EFA;
+    --colorBlue5: #00D2FC;
+    --colorTurqoise1: #0089BA;
+    --colorTurqoise2: #008E9B;
+    --colorGreen1: #4E8397;
+    --colorGreen2: #008F7A;
+    --colorGreen3: #00C9A7;
+    --colorGreen4: #4FFBDF;
+    --colorPurple1: #280D67;
+    --colorPurple2: #845EC2;
+    --colorPurple3: #B39CD0;
+    --colorBrown1: #4B4453;
+    --colorBrown2: #AD5E00;
+    --colorBrown3: #BEA6A0;
+    --colorOrange1: #C34A36;
+    --colorOrange2: #FF8066;
+    --colorOrange3: #FF9671;
+    --colorOrange4: #FFC75F;
+    --colorViolet1: #D65DB1;
+    --colorViolet2: #BB3BB0;
+    --colorPink1: #FF6F91;
+    --colorYellow1: #F9F871;
+    --colorYellow1: #FEFEDF;
+}
+
+* {
+    outline: none;
+    box-sizing: border-box;
+}
+
+a,
+button,
+input[type="submit"],
+input[type="button"] {
+    all: unset;
+}
+
+a,
+a:visited,
+a:active {
+    color: inherit;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    font-family: var(--fontSans1);
+    padding: 10vh 5vw;
+    color: white;
+    font-weight: bold;
+    background-image: repeating-linear-gradient(3deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 31px, transparent 31px, transparent 35px), repeating-linear-gradient(236deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 31px, transparent 31px, transparent 35px), repeating-linear-gradient(343deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 31px, transparent 31px, transparent 35px), repeating-linear-gradient(282deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 31px, transparent 31px, transparent 35px), linear-gradient(90deg, rgb(252, 28, 161), rgb(239, 115, 14));
+    display: flex;
+}
+
+.pw-container {
+    background-color: var(--colorTurqoise2);
+    margin: auto;
+    width: 300px;
+}
+
+.pw-header {
+    padding: 1rem;
+}
+
+
+.pw-header:hover .pw button {
+    right: 0;
+    visibility: visible;
+}
+
+.pw {
+    overflow: hidden;
+    width: 100%;
+    height: 70px;
+    background-color: #4B4453;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 1rem;
+}
+
+
+.pw button {
+    position: absolute;
+    bottom: 0;
+    right: -100%;
+    /* transform: translateX(-50%); */
+    background-color: var(--colorOrange1);
+    padding: 5px 10px;
+    visibility: hidden;
+    transition: all 0.4s ease-out;
+}
+
+.pw button:hover {
+    background-color: var(--colorOrange2);
+}
+
+.pw-body {
+    padding: 0 1rem 1rem;
+    font-variant: small-caps;
+}
+
+.form-control {
+    display: flex;
+    justify-content: space-between;
+}
+
+#generate-pw {
+    background-color: #404eb1;
+    width: 100%;
+    text-align: center;
+    padding: 0.6rem 0;
+    color: var(--colorOrange2);
+    margin-top: 1rem;
+}
+
+#generate-pw:hover {
+    background-color: darkslategrey;
+}
+
+#generate-pw:active {
+    background-color: slategrey;
+}
+
+@media only screen and (min-width: 500px) {
+
+    a,
+    button,
+    input[type="button"],
+    input[type="submit"],
+    input[type="checkbox"] {
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    a,
+    button,
+    input[type="button"],
+    input[type="submit"],
+    input[type="checkbox"] {
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+}
