@@ -75,7 +75,6 @@ function Redo() {
         redo.splice(-1, 1);
         drawPaths();
         updateSize();
-        console.log(redo)
     }
 }
 
@@ -85,7 +84,6 @@ function Undo() {
     if (undo.length > 0) {
         // remove the last path from the paths array
         redo.push(undo[undo.length - 1]);
-        // console.log(redo);
         undo.splice(-1, 1);
         // draw all the paths in the paths array
         drawPaths();
