@@ -65,6 +65,7 @@ canvas.addEventListener('mouseup', function () {
     drawing = false;
     // Adding the path to the array or the paths
     undo.push(points);
+    redo = [];
 });
 
 redoBtn.addEventListener('click', Redo);
