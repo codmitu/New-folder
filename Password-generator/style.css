@@ -42,7 +42,7 @@
 
 a,
 button,
-input[type="submit"],
+input[type="text"],
 input[type="button"] {
     all: unset;
 }
@@ -75,13 +75,12 @@ body {
     padding: 1rem;
 }
 
-
-.pw-header:hover .pw button {
+.pw-header:hover #copy {
     right: 0;
     visibility: visible;
 }
 
-.pw {
+.pw-box {
     overflow: hidden;
     width: 100%;
     height: 70px;
@@ -93,18 +92,17 @@ body {
 }
 
 
-.pw button {
+#copy {
     position: absolute;
     bottom: 0;
     right: -100%;
-    /* transform: translateX(-50%); */
     background-color: var(--colorOrange1);
     padding: 5px 10px;
     visibility: hidden;
-    transition: all 0.4s ease-out;
+    transition: all 0.2s ease-out;
 }
 
-.pw button:hover {
+.pw-box #copy:hover {
     background-color: var(--colorOrange2);
 }
 
@@ -150,6 +148,7 @@ body {
 
     a,
     button,
+    input[type="text"],
     input[type="button"],
     input[type="submit"],
     input[type="checkbox"] {
