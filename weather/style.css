@@ -60,7 +60,25 @@ body {
     font-family: var(--fontSans1);
     padding: 10vh 5vw;
     background-image: radial-gradient(circle at top left, rgb(36, 82, 165) 0%, rgb(36, 82, 165) 5%, rgb(47, 100, 177) 5%, rgb(47, 100, 177) 10%, rgb(57, 117, 190) 10%, rgb(57, 117, 190) 15%, rgb(68, 135, 202) 15%, rgb(68, 135, 202) 20%, rgb(79, 152, 215) 20%, rgb(79, 152, 215) 25%, rgb(90, 170, 227) 25%, rgb(90, 170, 227) 30%, rgb(100, 187, 240) 30%, rgb(100, 187, 240) 35%, rgb(111, 205, 252) 35%, rgb(111, 205, 252) 100%);
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    place-content: center;
+    text-align: center;
 }
+
+#search {
+    border-radius: 25px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: none;
+}
+
+main {
+    font-family: var(--fontCursive1);
+    font-size: 2rem;
+}
+
 
 
 @media only screen and (min-width: 500px) {
