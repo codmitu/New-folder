@@ -1,24 +1,37 @@
 
-const twChat = document.querySelector("#chat");
+const twChat = document.querySelector("#chatText");
+const form = document.querySelector("#form");
+const inp0 = document.querySelector("#input0");
+const inp1 = document.querySelector("#input1");
+const inp2 = document.querySelector("#input2");
+const submitBtn = document.querySelector("#submit");
 const messages = [];
-const maxMessages = 20;
+const maxMessages = 100;
 ComfyJS.onChat = (user, message, flags, self, extra) => {
-    updateMessages(user, message);
-    if (message === "OMEGALUL") {
-        ComfyJS.Say("LUL");
+    let timestamp = new Date(extra.timestamp * 1);
+    let dt = timestamp.toString().slice(16, 24);
+    updateMessages(dt, user, message);
+    let text = inp1.value;
+    let msg = inp2.value;
+    if (message.toLowerCase().includes(text) && text !== "" && msg !== "") {
+        ComfyJS.Say(msg);
     }
-    // if (message.includes('a')) {
-    //     ComfyJS.Say("fdgd");
-    // }
 }
-ComfyJS.Init("Wolfabelle", "zaa5dqea0ypm54vp2uyvcnwpmnf6t4");
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    iniateChannel();
+});
+function iniateChannel() {
+    let channel = inp0.value;
+    ComfyJS.Init(channel, 'i9eqn7bf4lqjpqb5sx62lic5p0ob0k');
+}
 
-function updateMessages(user, message) {
+function updateMessages(dt, user, message) {
     messages.push(message);
 
     const userEl = document.createElement('b');
     userEl.classList.add('user');
-    userEl.innerText = user + ': ';
+    userEl.innerText = `(${dt})${user}:  `;
 
     const textT = document.createElement('span');
     textT.classList.add('text');
