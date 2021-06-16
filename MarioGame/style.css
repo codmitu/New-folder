@@ -1,0 +1,84 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Itim&family=Pridi:wght@200;300;400;500;600;700&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+:root {
+    --fontSans1: 'Item', sans-serif;
+    --fontSans2: 'Rubik', serif;
+    --fontSans3: 'Tajawal', serif;
+    --fontSerif1: 'Pridi', serif;
+    --fontCursive1: 'Sacramento', serif;
+
+    --colorBlue1: #2C73D2;
+    --colorBlue2: #0081CF;
+    --colorBlue3: #008AC2;
+    --colorBlue4: #009EFA;
+    --colorBlue5: #00D2FC;
+    --colorTurqoise1: #0089BA;
+    --colorTurqoise2: #008E9B;
+    --colorGreen1: #4E8397;
+    --colorGreen2: #008F7A;
+    --colorGreen3: #00C9A7;
+    --colorGreen4: #4FFBDF;
+    --colorPurple1: #280D67;
+    --colorPurple2: #845EC2;
+    --colorPurple3: #B39CD0;
+    --colorBrown1: #4B4453;
+    --colorBrown2: #AD5E00;
+    --colorBrown3: #BEA6A0;
+    --colorOrange1: #C34A36;
+    --colorOrange2: #FF8066;
+    --colorOrange3: #FF9671;
+    --colorOrange4: #FFC75F;
+    --colorViolet1: #D65DB1;
+    --colorViolet2: #BB3BB0;
+    --colorPink1: #FF6F91;
+    --colorYellow1: #F9F871;
+    --colorYellow1: #FEFEDF;
+} */
+
+* {
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* a,
+button,
+input[type="submit"],
+input[type="button"] {
+    all: unset;
+}
+
+a,
+a:visited,
+a:active {
+    color: inherit;
+} */
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+
+/* 
+@media only screen and (min-width: 500px) {
+
+    a,
+    button,
+    input[type="button"],
+    input[type="submit"] {
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    a,
+    button,
+    input[type="button"],
+    input[type="submit"] {
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+} */
