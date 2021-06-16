@@ -1,0 +1,8 @@
+body {
+  min-height: 100vh;
+}
+
+/* h1 {
+  transform: translate(calc(50vw - 50%), calc(50vh - 50%));
+  display: inline-block;
+} */

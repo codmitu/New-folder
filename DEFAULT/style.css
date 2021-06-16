@@ -58,13 +58,48 @@ body {
     width: 100%;
     margin: 0;
     font-family: var(--fontSans1);
-    padding: 10vh 5vw;
+    /* padding: 10vh 5vw; */
     background-image: radial-gradient(rgb(0, 225, 255), rgb(0, 102, 255));
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    /* justify-content: space-around; */
-    align-items: center;
+    justify-content: space-around;
+    align-items: center; */
 }
+
+img {
+    transform: translate(calc(50vw - 50%), calc(50vh - 50%));
+}
+
+
+
+
+
+
+
+
+
+
+p {
+    color: red;
+    -webkit-text-stroke: 0.1px rgb(0, 0, 0);
+    mix-blend-mode: screen;
+}
+
+
+
+
+
+
+
+
+
+
+span {
+    color: white;
+
+}
+
+
 
 
 
