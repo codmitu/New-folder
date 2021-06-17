@@ -1,0 +1,27 @@
+body {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    background-image: radial-gradient(rgb(0, 225, 255), rgb(0, 102, 255));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.canvas {
+    background-image: linear-gradient(to top, grey, lightgrey);
+    border-radius: 5px;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.493);
+}
+
+p {
+    position: absolute;
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 0.7;
+    z-index: -1;
+    color: transparent;
+    -webkit-text-stroke: 0.5px rgba(17, 0, 255, 0.315);
+    text-align: justify;
+}

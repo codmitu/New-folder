@@ -66,39 +66,6 @@ body {
     align-items: center; */
 }
 
-img {
-    transform: translate(calc(50vw - 50%), calc(50vh - 50%));
-}
-
-
-
-
-
-
-
-
-
-
-p {
-    color: red;
-    -webkit-text-stroke: 0.1px rgb(0, 0, 0);
-    mix-blend-mode: screen;
-}
-
-
-
-
-
-
-
-
-
-
-span {
-    color: white;
-
-}
-
 
 
 
