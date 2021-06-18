@@ -1,0 +1,42 @@
+.input {
+    height: 50px;
+    width: 80%;
+    border-radius: 12px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 70px;
+}
+
+input {
+    background: none;
+    padding: 1rem;
+    border: none;
+    margin-left: 12px;
+    flex: 1;
+    outline: none;
+    font-size: 1rem;
+    transform-style: preserve-3d;
+}
+
+input:hover+button {
+    transform: rotateY(20deg) translateX(10px);
+    transform-origin: right;
+}
+
+button {
+    transition: all 0.4s;
+    margin-right: 8px;
+    background-color: rgb(113, 213, 213);
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    width: 50px;
+    cursor: pointer;
+    color: white;
+}
+
+button:hover {
+    background-color: rgb(5, 119, 119);
+}
