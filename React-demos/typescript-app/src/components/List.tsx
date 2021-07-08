@@ -4,9 +4,9 @@ import { IState as IProps } from '../App'
 
 export const List: React.FC<IProps> = ({ people }) => {
     const renderList = (): JSX.Element[] => {
-        return people.map((person) => {
+        return people.map((person, id) => {
             return (
-                <li className="List">
+                <li className="List" key={id}>
                     <div className="List-header">
                         <img src={person.url} className="List-img" alt="" />
                         <h2>{person.name}</h2>
