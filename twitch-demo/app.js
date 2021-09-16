@@ -17,13 +17,18 @@ ComfyJS.onChat = (user, message, flags, self, extra) => {
         ComfyJS.Say(msg);
     }
 }
+ComfyJS.onCommand = (user, command, message, flags, extra) => {
+    if (command === "keep") {
+        ComfyJS.Say("replying to !keeps");
+    }
+}
 form.addEventListener('submit', e => {
     e.preventDefault();
     iniateChannel();
 });
 function iniateChannel() {
     let channel = inp0.value;
-    ComfyJS.Init(channel, 'i9eqn7bf4lqjpqb5sx62lic5p0ob0k');
+    ComfyJS.Init('mezerx', 'zaa5dqea0ypm54vp2uyvcnwpmnf6t4', channel);
 }
 
 function updateMessages(dt, user, message) {
